@@ -10,7 +10,7 @@ Route::get('/', function () {
     return redirect()->route('dashboard');
 });
 
-Route::middleware(['auth'])->group(function () {
+Route::middleware(['auth', 'mobile.only'])->group(function () {
     Route::get('/dashboard', Dashboard::class)->name('dashboard');
     Route::get('/purchases', Purchases::class)->name('purchases');
     Route::get('/rewards', Rewards::class)->name('rewards');
@@ -20,7 +20,7 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/staff', \App\Livewire\Staff\Dashboard::class)->name('staff.dashboard');
 });
 
-// Staff login (no auth required)
-Route::get('/staff/login', \App\Livewire\Staff\Login::class)->name('staff.login');
+// Staff login (no auth required, but mobile only)
+Route::get('/staff/login', \App\Livewire\Staff\Login::class)->name('staff.login')->middleware('mobile.only');
 
 require __DIR__.'/auth.php';
