@@ -9,6 +9,7 @@
 
     <!-- PWA Meta Tags -->
     <meta name="theme-color" content="#d97706">
+    <meta name="mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="default">
     <meta name="apple-mobile-web-app-title" content="Cafe Royalty">
@@ -91,6 +92,16 @@
                     .catch(function(registrationError) {
                         console.log('SW registration failed: ', registrationError);
                     });
+            });
+        }
+
+        // Suppress Vite HMR WebSocket errors in production
+        if (typeof window !== 'undefined' && window.location.hostname !== 'localhost') {
+            window.addEventListener('error', function(e) {
+                if (e.message.includes('WebSocket') && e.message.includes('wss://')) {
+                    e.preventDefault();
+                    return false;
+                }
             });
         }
     </script>
