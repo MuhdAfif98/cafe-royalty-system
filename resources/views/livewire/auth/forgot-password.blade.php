@@ -12,7 +12,7 @@
             type="tel"
             required
             autofocus
-            placeholder="+1234567890"
+            placeholder="1234567890"
         />
 
         <flux:button variant="primary" type="submit" class="w-full">{{ __('Send password reset code') }}</flux:button>

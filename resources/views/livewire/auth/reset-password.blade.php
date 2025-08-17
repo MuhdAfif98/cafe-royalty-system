@@ -12,7 +12,7 @@
             type="tel"
             required
             autocomplete="tel"
-            placeholder="+1234567890"
+            placeholder="1234567890"
         />
 
         <!-- OTP Code -->

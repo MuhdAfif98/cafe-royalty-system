@@ -1,8 +1,8 @@
 <div class="p-4">
     <!-- Header -->
     <div class="mb-6">
-        <h1 class="text-3xl font-bold text-gray-800 mb-2">Redeem Points</h1>
-        <p class="text-gray-600">Convert your points into rewards</p>
+        <h1 class="text-3xl font-bold text-neutral-800 mb-2 font-heading">Redeem Points</h1>
+        <p class="text-neutral-600">Convert your points into rewards</p>
     </div>
 
     <!-- Message Display -->
@@ -14,27 +14,27 @@
 
     <!-- Available Rewards -->
     <div class="bg-white rounded-2xl shadow-lg p-6 mb-6">
-        <h2 class="text-xl font-semibold text-gray-800 mb-4">Available Rewards</h2>
+        <h2 class="text-xl font-semibold text-neutral-800 mb-4 font-heading">Available Rewards</h2>
 
         <div class="grid gap-4">
             @foreach($availableRewards as $reward)
-            <div class="border border-amber-200 rounded-lg p-4 hover:border-amber-400 transition-colors cursor-pointer {{ $selectedReward && $selectedReward['id'] === $reward['id'] ? 'border-amber-600 bg-amber-50' : '' }}"
+            <div class="border border-accent-200 rounded-lg p-4 hover:border-accent-400 transition-colors cursor-pointer {{ $selectedReward && $selectedReward['id'] === $reward['id'] ? 'border-accent-600 bg-accent-50' : '' }}"
                  wire:click="selectReward('{{ $reward['id'] }}')">
                 <div class="flex items-center justify-between">
                     <div class="flex items-center">
-                        <div class="w-12 h-12 rounded-full bg-amber-100 flex items-center justify-center mr-4">
-                            <svg class="w-6 h-6 text-amber-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <div class="w-12 h-12 rounded-full bg-accent-100 flex items-center justify-center mr-4">
+                            <svg class="w-6 h-6 text-accent-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1"></path>
                             </svg>
                         </div>
                         <div>
-                            <div class="font-semibold text-gray-800">{{ $reward['name'] }}</div>
-                            <div class="text-sm text-gray-600">{{ $reward['description'] }}</div>
+                            <div class="font-semibold text-neutral-800">{{ $reward['name'] }}</div>
+                            <div class="text-sm text-neutral-600">{{ $reward['description'] }}</div>
                         </div>
                     </div>
                     <div class="text-right">
-                        <div class="font-bold text-amber-600">{{ $reward['points'] }} pts</div>
-                        <div class="text-xs text-gray-500">Required</div>
+                        <div class="font-bold text-accent-600">{{ $reward['points'] }} pts</div>
+                        <div class="text-xs text-neutral-500">Required</div>
                     </div>
                 </div>
             </div>
@@ -45,11 +45,11 @@
     <!-- Redemption Form -->
     @if($selectedReward)
     <div class="bg-white rounded-2xl shadow-lg p-6 mb-6">
-        <h2 class="text-xl font-semibold text-gray-800 mb-4">Redeem Points</h2>
+        <h2 class="text-xl font-semibold text-neutral-800 mb-4 font-heading">Redeem Points</h2>
 
         <form wire:submit="redeemPoints">
             <div class="mb-4">
-                <label for="pointsToRedeem" class="block text-sm font-medium text-gray-700 mb-2">Points to Redeem</label>
+                <label for="pointsToRedeem" class="block text-sm font-medium text-neutral-700 mb-2">Points to Redeem</label>
                 <input
                     type="number"
                     id="pointsToRedeem"
@@ -57,7 +57,7 @@
                     min="10"
                     max="1000"
                     step="10"
-                    class="w-full px-4 py-3 border border-amber-200 rounded-lg focus:ring-2 focus:ring-amber-600 focus:border-transparent bg-amber-50"
+                    class="w-full px-4 py-3 border border-accent-200 rounded-lg focus:ring-2 focus:ring-accent-600 focus:border-transparent bg-accent-50"
                     placeholder="Enter points (multiples of 10)"
                 >
                 @error('pointsToRedeem')
@@ -65,12 +65,12 @@
                 @enderror
             </div>
 
-            <div class="mb-4 p-3 bg-amber-50 border border-amber-200 rounded-lg">
-                <div class="text-sm text-amber-800">
+            <div class="mb-4 p-3 bg-accent-50 border border-accent-200 rounded-lg">
+                <div class="text-sm text-accent-800">
                     <strong>Exchange Rate:</strong> 10 points = $1 discount
                 </div>
                 @if($pointsToRedeem && $pointsToRedeem >= 10)
-                    <div class="text-sm text-amber-800 mt-1">
+                    <div class="text-sm text-accent-800 mt-1">
                         <strong>You'll get:</strong> ${{ number_format($pointsToRedeem / 10, 2) }} discount
                     </div>
                 @endif
@@ -79,7 +79,7 @@
             <button
                 type="submit"
                 wire:loading.attr="disabled"
-                class="w-full bg-amber-700 hover:bg-amber-800 disabled:bg-gray-400 text-white px-6 py-3 rounded-lg transition-colors font-semibold shadow-lg"
+                class="w-full bg-accent-600 hover:bg-accent-700 disabled:bg-neutral-400 text-white px-6 py-3 rounded-lg transition-colors font-semibold shadow-lg"
             >
                 <span wire:loading.remove>Redeem {{ $pointsToRedeem ? $pointsToRedeem : 'Points' }}</span>
                 <span wire:loading>Processing...</span>

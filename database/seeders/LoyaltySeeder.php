@@ -16,8 +16,8 @@ class LoyaltySeeder extends Seeder
         $user = User::create([
             'name' => 'John Doe',
             'email' => 'john@example.com',
-            'phone_number' => '+1234567891',
-            'password' => Hash::make('Password123!'),
+            'phone_number' => '1234567891',
+            'password' => Hash::make('password'),
             'points_balance' => 150,
             'phone_verified' => true,
         ]);
@@ -108,6 +108,6 @@ class LoyaltySeeder extends Seeder
         ]);
 
         $this->command->info('Loyalty system seeded successfully!');
-        $this->command->info('Test user: john@example.com / Password123!');
+        $this->command->info('Test user: john@example.com / password');
     }
 }

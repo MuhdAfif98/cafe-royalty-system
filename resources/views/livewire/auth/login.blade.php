@@ -13,7 +13,8 @@
             required
             autofocus
             autocomplete="tel"
-            placeholder="+1234567890"
+            placeholder="1234567890"
+            class="focus:ring-primary-500 focus:border-primary-500"
         />
 
         <!-- Password -->

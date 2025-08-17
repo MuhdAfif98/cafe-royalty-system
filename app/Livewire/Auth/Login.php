@@ -15,7 +15,7 @@ use Livewire\Component;
 #[Layout('components.layouts.auth')]
 class Login extends Component
 {
-    #[Validate('required|string|regex:/^\+[1-9]\d{1,14}$/')]
+    #[Validate('required|string')]
     public string $phone_number = '';
 
     #[Validate('required|string')]

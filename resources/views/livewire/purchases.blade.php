@@ -2,14 +2,14 @@
     <!-- Header -->
     <div class="mb-8">
         <div class="flex items-center mb-3">
-            <div class="w-12 h-12 bg-gradient-to-br from-amber-200 to-amber-300 rounded-full flex items-center justify-center mr-4">
-                <svg class="w-6 h-6 text-amber-800" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <div class="w-12 h-12 bg-gradient-to-br from-primary-200 to-primary-300 rounded-full flex items-center justify-center mr-4">
+                <svg class="w-6 h-6 text-primary-800" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path>
                 </svg>
             </div>
             <div>
-                <h1 class="text-3xl font-bold text-gray-800">Earn Points</h1>
-                <p class="text-gray-600">Scan QR codes or enter purchases manually</p>
+                <h1 class="text-3xl font-bold text-neutral-800 font-heading">Earn Points</h1>
+                <p class="text-neutral-600">Scan QR codes or enter purchases manually</p>
             </div>
         </div>
     </div>
@@ -23,17 +23,17 @@
 
     <!-- QR Scanner Section -->
     <div class="relative overflow-hidden bg-white rounded-2xl shadow-xl p-6 mb-6">
-        <div class="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-amber-100 to-amber-200 rounded-full -mr-16 -mt-16 opacity-50"></div>
+        <div class="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-primary-100 to-primary-200 rounded-full -mr-16 -mt-16 opacity-50"></div>
         <div class="relative">
             <div class="flex items-center mb-6">
-                <div class="w-10 h-10 bg-amber-100 rounded-full flex items-center justify-center mr-3">
-                    <svg class="w-5 h-5 text-amber-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <div class="w-10 h-10 bg-primary-100 rounded-full flex items-center justify-center mr-3">
+                    <svg class="w-5 h-5 text-primary-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v1m6 11h2m-6 0h-2v4m0-11v3m0 0h.01M12 12h4.01M16 20h4M4 12h4m12 0h.01M5 8h2a1 1 0 001-1V6a1 1 0 00-1-1H5a1 1 0 00-1 1v1a1 1 0 001 1zm12 0h2a1 1 0 001-1V6a1 1 0 00-1-1h-2a1 1 0 00-1 1v1a1 1 0 001 1zM5 20h2a1 1 0 001-1v-1a1 1 0 00-1-1H5a1 1 0 00-1 1v1a1 1 0 001 1z"></path>
                     </svg>
                 </div>
                 <div>
-                    <h2 class="text-xl font-semibold text-gray-800">Scan QR Code</h2>
-                    <p class="text-gray-600 text-sm">Point your camera at the purchase QR code</p>
+                    <h2 class="text-xl font-semibold text-neutral-800 font-heading">Scan QR Code</h2>
+                    <p class="text-neutral-600 text-sm">Point your camera at the purchase QR code</p>
                 </div>
             </div>
 
@@ -54,12 +54,12 @@
                 </div>
             @else
                 <div class="text-center">
-                    <div class="w-48 h-48 bg-gradient-to-br from-amber-50 to-amber-100 rounded-2xl mx-auto mb-6 flex items-center justify-center border-2 border-amber-200 shadow-inner">
-                        <svg class="w-16 h-16 text-amber-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <div class="w-48 h-48 bg-gradient-to-br from-primary-50 to-primary-100 rounded-2xl mx-auto mb-6 flex items-center justify-center border-2 border-primary-200 shadow-inner">
+                        <svg class="w-16 h-16 text-primary-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v1m6 11h2m-6 0h-2v4m0-11v3m0 0h.01M12 12h4.01M16 20h4M4 12h4m12 0h.01M5 8h2a1 1 0 001-1V6a1 1 0 00-1-1H5a1 1 0 00-1 1v1a1 1 0 001 1zm12 0h2a1 1 0 001-1V6a1 1 0 00-1-1h-2a1 1 0 00-1 1v1a1 1 0 001 1zM5 20h2a1 1 0 001-1v-1a1 1 0 00-1-1H5a1 1 0 00-1 1v1a1 1 0 001 1z"></path>
                         </svg>
                     </div>
-                    <button wire:click="toggleScanner" class="bg-gradient-to-r from-amber-600 to-amber-700 hover:from-amber-700 hover:to-amber-800 text-white px-8 py-4 rounded-xl transition-all duration-300 font-semibold shadow-xl transform hover:scale-105">
+                    <button wire:click="toggleScanner" class="bg-gradient-to-r from-primary-600 to-primary-700 hover:from-primary-700 hover:to-primary-800 text-white px-8 py-4 rounded-xl transition-all duration-300 font-semibold shadow-xl transform hover:scale-105">
                         <svg class="w-5 h-5 inline mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v1m6 11h2m-6 0h-2v4m0-11v3m0 0h.01M12 12h4.01M16 20h4M4 12h4m12 0h.01M5 8h2a1 1 0 001-1V6a1 1 0 00-1-1H5a1 1 0 00-1 1v1a1 1 0 001 1zm12 0h2a1 1 0 001-1V6a1 1 0 00-1-1h-2a1 1 0 00-1 1v1a1 1 0 001 1zM5 20h2a1 1 0 001-1v-1a1 1 0 00-1-1H5a1 1 0 00-1 1v1a1 1 0 001 1z"></path>
                         </svg>
