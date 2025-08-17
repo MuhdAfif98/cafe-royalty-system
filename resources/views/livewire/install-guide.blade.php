@@ -13,7 +13,7 @@
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"></path>
                 </svg>
             </div>
-            <h2 class="text-xl font-semibold text-neutral-900 mb-2 font-heading">Install Cafe Royalty</h2>
+            <h2 class="text-xl font-semibold text-neutral-900 mb-2 font-heading">Install Sip n Save</h2>
             <p class="text-neutral-600 mb-6">Add this app to your home screen for quick access</p>
 
             <button id="installBtn" class="bg-primary-600 text-white px-8 py-3 rounded-xl text-lg font-medium hover:bg-primary-700 transition-colors flex items-center mx-auto space-x-2">
@@ -74,7 +74,7 @@
                 </div>
                 <ol class="list-decimal list-inside space-y-2 text-sm text-neutral-700">
                     <li>Click the <strong>Install</strong> button in the address bar</li>
-                    <li>Or click the <strong>Menu</strong> button and select "Install Cafe Royalty"</li>
+                    <li>Or click the <strong>Menu</strong> button and select "Install Sip n Save"</li>
                     <li>Click <strong>"Install"</strong> to confirm</li>
                     <li>The app will open in its own window</li>
                 </ol>
